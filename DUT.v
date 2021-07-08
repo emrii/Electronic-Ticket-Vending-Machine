@@ -13,7 +13,7 @@ module vending_machine (ticket, coin, clk, rst) ;
   always @ (posedge rst or negedge ticket) //machine is reset after each ticket is dispensed
     begin
       state <= S0;
-      ticket = 1'b0;
+      ticket <= 1'b0;
       #0 $display("Enter the coins, only nickels and dimes accepted.");
     end
 
